@@ -55,16 +55,6 @@ public class UserController {
 
 	}
 
-	/*
-	 * @RequestMapping(value ="/loginUser", method = RequestMethod.POST) public
-	 * String login(@RequestParam String userName, @RequestParam String
-	 * password){ for(User user: userServiceImpl.getAllUsers()){
-	 * if(userName.equals(user.getUserName())&&password.equals(user.getPassword(
-	 * ))){ System.out.println(user); } }
-	 * 
-	 * return "index";
-	 * 
-	 * }
-	 */
+
 
 }

@@ -4,7 +4,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -57,7 +56,6 @@ public class ArticleConrtoller {
 		String name = user.getUsername();
 
 		ua.blog.entity.User myUser = (ua.blog.entity.User) userServiceImpl.findOneByName(name);
-		System.out.println(myUser.toString());
 		article.setUser(myUser);
 
 		DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");

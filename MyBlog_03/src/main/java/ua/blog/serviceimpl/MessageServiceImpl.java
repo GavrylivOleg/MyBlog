@@ -15,8 +15,8 @@ public class MessageServiceImpl implements MessageService {
 	@Autowired
 	private MessageDao messageDao;
 
-	public void saveMessage(Message messageName) {
-		messageDao.save(messageName);
+	public void saveMessage(Message message ){
+		messageDao.save(message);
 
 	}
 

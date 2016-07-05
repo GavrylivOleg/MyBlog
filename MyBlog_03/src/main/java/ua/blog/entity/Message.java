@@ -21,26 +21,31 @@ public class Message implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column(name = "text")
-	private String text;
+	@Column(name = "messageText")
+	private String messageText;
 	@Column(name = "date")
-	private Date date;
+	private String date;
 
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+
+	@ManyToOne( fetch = FetchType.EAGER)
 	private User user;
 
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@ManyToOne( fetch = FetchType.EAGER)
 	private Article article;
 
 	public Message() {
 
 	}
 
-	public Message(String text, Date date) {
+	
+
+	public Message(String messageText, String date) {
 		super();
-		this.text = text;
+		this.messageText = messageText;
 		this.date = date;
 	}
+
+
 
 	public int getId() {
 		return id;
@@ -50,21 +55,27 @@ public class Message implements Serializable {
 		this.id = id;
 	}
 
-	public String getText() {
-		return text;
+	public String getMessageText() {
+		return messageText;
 	}
 
-	public void setText(String text) {
-		this.text = text;
+	public void setMessageText(String messageText) {
+		this.messageText = messageText;
 	}
 
-	public Date getDate() {
+
+
+	public String getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+
+
+	public void setDate(String date) {
 		this.date = date;
 	}
+
+
 
 	public User getUser() {
 		return user;
@@ -106,7 +117,7 @@ public class Message implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Message [id=" + id + ", text=" + text + ", date=" + date + "]";
+		return "Message [id=" + id + ", text=" + messageText + ", date=" + date + "]";
 	}
 
 }
