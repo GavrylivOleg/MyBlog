@@ -15,6 +15,8 @@ public class MessageServiceImpl implements MessageService {
 	@Autowired
 	private MessageDao messageDao;
 
+	
+	
 	public void saveMessage(Message message ){
 		messageDao.save(message);
 
@@ -25,11 +27,13 @@ public class MessageServiceImpl implements MessageService {
 		return messageDao.findAll();
 	}
 
+
 	public Message findById(int id) {
 
 		return messageDao.findOne(id);
 	}
 
+	
 	public void deleteMessage(int id) {
 		messageDao.delete(id);
 

@@ -13,6 +13,9 @@ import ua.blog.serviceimpl.GroupAtriclesServiceImpl;
 @Controller
 public class IndexController {
 
+	
+	
+	
 	@Qualifier("articleService")
 	@Autowired
 	private ArticleServiceImpl articleServiceImpl;

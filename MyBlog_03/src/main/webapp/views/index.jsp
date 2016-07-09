@@ -1,18 +1,24 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java"
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%@ taglib uri="http://www.springframework.org/security/tags"
 	prefix="sec"%>
+
+<%@ page import="java.net.URLEncoder"%>
+<%response.sendRedirect("targetPage.jsp?MyParam="+URLEncoder.encode("Русский текст","UTF-8"));%>
+
+
 <html>
+
 <head>
-   
- 
+
+
 <link rel="stylesheet" type="text/css" href="resources/css/style.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <link rel="stylesheet" type="text/css" href="resources/css/vertMenu.css">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
@@ -35,6 +41,8 @@
 
 <title>blog</title>
 </head>
+
+
 
 <body>
 

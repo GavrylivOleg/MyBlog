@@ -15,11 +15,13 @@ public class GroupAtriclesServiceImpl implements GroupArticlesService {
 	@Autowired
 	private GroupArticlesDao groupArticlesDao;
 
+	
 	public void saveGroupArticles(GroupArticles groupName) {
 		groupArticlesDao.save(groupName);
 
 	}
 
+	
 	public List<GroupArticles> getAllGroupArticles() {
 
 		return groupArticlesDao.findAll();
@@ -30,15 +32,18 @@ public class GroupAtriclesServiceImpl implements GroupArticlesService {
 		return groupArticlesDao.findOne(id);
 	}
 
+
 	public void deleteGroupArticles(int id) {
 		groupArticlesDao.delete(id);
 
 	}
 
+	
 	public void deleteGroupArticlesByName(String groupName) {
 		groupArticlesDao.deleteGroupArticlesByName(groupName);
 	}
 
+	
 	public GroupArticles findOneGroupArticlesByName(String groupName) {
 		return groupArticlesDao.findOneGroupArticlesByName(groupName);
 	}

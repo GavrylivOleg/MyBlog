@@ -7,6 +7,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
+<link href="<c:url value="/resources/css/home.css" />" rel="stylesheet">
+
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
@@ -29,40 +31,22 @@
 </head>
 <body>
 
-
-
-	<form class="form-horizontal"  name="login "action="login" method="post">
-		<div class="form-group">
-			<label for="inputEmail3" class="col-sm-2 control-label">userName</label>
-			<div class="col-sm-10">
-				<input type="text" name="userName" class="form-control"
-					id="inputEmail3" placeholder="userName">
-			</div>
-		</div>
-		<div class="form-group">
-			<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
-			<div class="col-sm-10">
-				<input type="password" name="password" class="form-control"
-					id="inputPassword3" placeholder="Password">
-			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
-				<div class="checkbox">
-					<label> <input type="checkbox"> Remember me
-					</label>
-				</div>
-			</div>
-		</div>
-		<div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
-				<button type="submit" class="btn btn-default">Sign in</button>
-			</div>
-		</div>
-		<input type="hidden" name="${_csrf.parameterName}"
+<div>
+<form class="box login"  name="login "action="login" method="post">
+	<fieldset class="boxBody">
+	  <label>Username</label>
+	  <input type="text" tabindex="1" name="userName" placeholder="username" required/>
+	  <label><a href="#" class="rLink" tabindex="5">Forget your password?</a>Password</label>
+	  <input type="password" tabindex="2" name="password" required placeholder="password"/>
+	</fieldset>
+	<footer>
+	  <label><input type="checkbox" tabindex="3">Keep me logged in</label>
+	  <input type="submit" class="btnLogin" value="Login" tabindex="4">
+	</footer>
+	<input type="hidden" name="${_csrf.parameterName}"
 			value="${_csrf.token}" />
-	</form>
-
+</form>
+</div>
 
 
 </body>

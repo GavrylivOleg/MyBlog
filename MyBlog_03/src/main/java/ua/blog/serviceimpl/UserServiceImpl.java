@@ -23,6 +23,7 @@ public class UserServiceImpl implements UserDetailsService, UserService {
 	@Autowired
 	private UserDao userDao;
 
+	
 	public void saveUser(User user) {
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		user.setPassword(encoder.encode(user.getPassword()));
@@ -30,21 +31,25 @@ public class UserServiceImpl implements UserDetailsService, UserService {
 
 	}
 
+	
 	public List<User> getAllUsers() {
 
 		return userDao.findAll();
 	}
+
 
 	public User findById(int id) {
 
 		return userDao.findOne(id);
 	}
 
+	
 	public void deleteUser(int id) {
 		userDao.delete(id);
 
 	}
 
+	
 	public void deleteUserbyName(String userName) {
 		userDao.deleteUserByName(userName);
 	}
@@ -53,6 +58,7 @@ public class UserServiceImpl implements UserDetailsService, UserService {
 		return userDao.findOneByName(userName);
 	}
 
+	
 	public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
 		User user;
 

@@ -6,4 +6,5 @@ import ua.blog.entity.Message;
 
 public interface MessageDao extends JpaRepository<Message, Integer> {
 
+	
 }

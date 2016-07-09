@@ -1,10 +1,14 @@
 
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="sf"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib uri="http://www.springframework.org/security/tags"
 	prefix="sec"%>
+	<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+	<%@ page import="java.net.URLEncoder"%>
+<%response.sendRedirect("targetPage.jsp?MyParam="+URLEncoder.encode("Русский текст","UTF-8"));%>
+	
 <html>
 <head>
 <title>add article</title>
