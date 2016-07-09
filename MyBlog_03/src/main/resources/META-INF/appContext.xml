@@ -29,7 +29,7 @@
 	</bean>
 	<context:component-scan base-package="ua.blog.*"/>
 
-	<jpa:repositories base-package="ua.blog.dao"/>
+	<jpa:repositories base-package="ua.blog.repository"/>
 
 	<tx:annotation-driven transaction-manager="transactionManager"/>
 

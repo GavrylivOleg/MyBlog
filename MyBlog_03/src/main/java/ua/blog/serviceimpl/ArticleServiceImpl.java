@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import ua.blog.dao.ArticleDao;
 import ua.blog.entity.Article;
+import ua.blog.repository.ArticleRepository;
 import ua.blog.service.ArticleService;
 
 
@@ -15,7 +15,7 @@ import ua.blog.service.ArticleService;
 public class ArticleServiceImpl implements ArticleService {
 
 	@Autowired
-	private ArticleDao articleDao;
+	private ArticleRepository articleDao;
 
 	
 	public void saveArticle(Article articleName) {

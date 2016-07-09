@@ -5,15 +5,15 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ua.blog.dao.MessageDao;
 import ua.blog.entity.Message;
+import ua.blog.repository.MessageRepository;
 import ua.blog.service.MessageService;
 
 @Service("messageService")
 public class MessageServiceImpl implements MessageService {
 
 	@Autowired
-	private MessageDao messageDao;
+	private MessageRepository messageDao;
 
 	
 	

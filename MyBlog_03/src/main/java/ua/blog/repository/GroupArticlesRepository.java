@@ -1,4 +1,4 @@
-package ua.blog.dao;
+package ua.blog.repository;
 
 
 
@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import ua.blog.entity.GroupArticles;
 
-public interface GroupArticlesDao extends JpaRepository<GroupArticles, Integer> {
+public interface GroupArticlesRepository extends JpaRepository<GroupArticles, Integer> {
 
 	@Transactional(propagation=Propagation.REQUIRED)
 	@Query("select a from GroupArticles a where a.groupName=:mytitle")

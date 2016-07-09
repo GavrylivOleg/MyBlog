@@ -13,15 +13,15 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import ua.blog.dao.UserDao;
 import ua.blog.entity.User;
+import ua.blog.repository.UserRepository;
 import ua.blog.service.UserService;
 
 @Service("userDetailService")
 public class UserServiceImpl implements UserDetailsService, UserService {
 
 	@Autowired
-	private UserDao userDao;
+	private UserRepository userDao;
 
 	
 	public void saveUser(User user) {

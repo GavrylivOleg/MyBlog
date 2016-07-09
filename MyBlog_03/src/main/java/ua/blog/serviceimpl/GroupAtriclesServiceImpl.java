@@ -5,15 +5,15 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ua.blog.dao.GroupArticlesDao;
 import ua.blog.entity.GroupArticles;
+import ua.blog.repository.GroupArticlesRepository;
 import ua.blog.service.GroupArticlesService;
 
 @Service("groupArticlesService")
 public class GroupAtriclesServiceImpl implements GroupArticlesService {
 
 	@Autowired
-	private GroupArticlesDao groupArticlesDao;
+	private GroupArticlesRepository groupArticlesDao;
 
 	
 	public void saveGroupArticles(GroupArticles groupName) {

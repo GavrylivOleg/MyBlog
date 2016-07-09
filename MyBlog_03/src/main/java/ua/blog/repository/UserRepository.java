@@ -1,4 +1,4 @@
-package ua.blog.dao;
+package ua.blog.repository;
 
 
 
@@ -9,20 +9,17 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import ua.blog.entity.Article;
+import ua.blog.entity.User;
 
-public interface ArticleDao extends JpaRepository<Article, Integer> {
+public interface UserRepository extends JpaRepository<User, Integer> {
 
 	
 	@Transactional(propagation=Propagation.REQUIRED)
-	@Query("select a from Article a where a.title=:mytitle")
-	Article findOneByName(@Param(value = "mytitle") String mytitle);
+	@Query("select u from User u where u.userName=:name")
+	User findOneByName(@Param(value = "name") String name);
 
 	@Transactional(propagation=Propagation.REQUIRED)
 	@Modifying
-	@Query("delete from Article a where a.title=:mytitle")
-	void deleteArticleByName(@Param(value = "mytitle") String mytitle);
-	
-	
-
+	@Query("delete from User u where u.userName=:name")
+	void deleteUserByName(@Param(value = "name") String name);
 }
